@@ -1,0 +1,16 @@
+STEPS INVOLVED IN CLASSIFICATION
+3.5.1. DATA CLASSIFICATION
+STEP 1: Downloading the dataset from online repositories.
+STEP 2: Importing the libraries.
+STEP 3: Importing the dataset into the program using libraries
+STEP 4: Plotting the graph for the assigned values using sklearn library.
+STEP 5: Plotting the box plot for all the values using sklearn library.
+STEP 6: Initializing X and Y parameters.
+STEP 7: Splitting the data as test and train data.
+STEP 8: Obtaining the accuracy for each of the three algorithms.
+3.5.2. IMAGE CLASSIFICATION
+STEP 1: Downloading the dataset from online repositories.
+STEP 2: Importing the libraries.
+STEP 3: Importing the dataset into the program using libraries
+STEP 4: Training the convolution Neural Network.
+STEP 5: Testing using a random image and obtaining the output.
