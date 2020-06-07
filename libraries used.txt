@@ -1,0 +1,13 @@
+. LIBRARIERS USED
+KERAS
+It is an open source library for neural networks.it has the potential to run Tensorflow, Microsoft Cognitive Toolkit or Theano. It is designed in a way that it will be user friendly, fast experiment with deep learning and extensible. Its preliminary author and maintainer is Francois Chollet, a Google engineer.
+NUMPY
+Numpy is a python programming library giving support for large, multi-dimensional arrays, with a huge collection of mathematical functions to operate arrays. The original author of numpy is Travis Oliphant.
+PANDAS
+Pandas is a computer programming library created for python language. It is used in data manipulation and analysis. In specific, it provides data structure and operations for manipulating numerical table and time series. The original author of pandas is Wes McKinney.
+SEABORN
+Seaborn is a data visualization library for python. It exhibits a high-level interference for drawing attributes and informative statistical graphics. The copyright of seaborn is with Michael Waskom. 
+MATHPLOT
+Mathplot is a python plotting library that is responsible for plotting graphs in the python programs. SciPy makes use of mathplot. The original author of mathplot is John D. Hunter.
+SCIKIT-LEARN
+Scikit-learn is a free python software machine learning library. It consist of classification, regression and clustering algorithms including SVM, random forest, gradient booster etc.., The original author of scikit-learn is David Cournapeau.
