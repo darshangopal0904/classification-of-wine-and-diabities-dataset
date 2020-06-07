@@ -1,0 +1,53 @@
+import pandas as pd
+fruits = pd.read_table('pimaindia.txt')
+print(fruits.head())
+print(fruits.keys())
+print(fruits.shape)
+print(fruits['Age'].unique())
+print(fruits.groupby('Age').size())
+import seaborn as sns
+import matplotlib.pyplot as plt
+fig,ax=plt.subplots()
+fig.set_size_inches(30,15)
+sns.countplot(fruits['Age'],label="COUNT")
+plt.show()
+print(fruits.describe())
+fruits.drop('Age', axis=1).plot(kind='box', subplots=True, layout=(12,12), sharex=False, sharey=False, figsize=(50,50), 
+                                        title='Box Plot for each input variable')
+plt.savefig('pimaindia')
+plt.show()
+feature_names = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin','BMI', 'DiabetesPedigreeFunction',  'Outcome']
+X = fruits[feature_names]
+y = fruits['Insulin']
+print(X.head())
+print(y.head())
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+print(X_train.shape)
+print(X_test.shape)
+print(y_train.shape)
+print(y_test.shape)
+from sklearn.tree import DecisionTreeClassifier
+clf = DecisionTreeClassifier().fit(X_train, y_train)
+print('Accuracy of Decision Tree classifier on training set: {:.2f}'
+     .format(clf.score(X_train, y_train)))
+print('Accuracy of Decision Tree classifier on test set: {:.2f}'
+     .format(clf.score(X_test, y_test)))
+from sklearn.naive_bayes import GaussianNB
+nb= GaussianNB()
+nb.fit(X_train, y_train)
+print('Accuracy of Naive Bayesian classifier on training set: {:.2f}'
+     .format(nb.score(X_train, y_train)))
+print('Accuracy of Naive Bayesian classifier on test set: {:.2f}'
+     .format(nb.score(X_test, y_test)))
+from sklearn.svm import SVC
+svm = SVC()
+svm.fit(X_train, y_train)
+print('Accuracy of SVM classifier on training set: {:.2f}'
+     .format(svm.score(X_train, y_train)))
+print('Accuracy of SVM classifier on test set: {:.2f}'
+     .format(svm.score(X_test, y_test)))
